@@ -20,5 +20,5 @@ pip install -r requirements.txt
 -   ### Enjoy
 
 ```sh
-python3 bfzip -i path/to/zip -l path/to/wordlist
+python3 fzc -i path/to/zip.{zip} -l path/to/wordlist.{txt, lst}
 ```
