@@ -1,5 +1,7 @@
 import signal
+
 import subprocess
+from utils.signal_handler import signal_handler
 from utils.banner import banner
 from utils.arguments_parser import args
 from utils.zip_checker import check_zip
@@ -10,6 +12,7 @@ from pathlib import Path
 
 
 def init():
+    signal.signal(signal.SIGINT, signal_handler)
     subprocess.run(["clear"])
     print(banner)
     print("\nPress CTRL+C to cancel")
